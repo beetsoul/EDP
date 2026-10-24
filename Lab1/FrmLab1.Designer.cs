@@ -31,6 +31,7 @@
             txtInput = new TextBox();
             btnCreate = new Button();
             btnRegisteration = new Button();
+            BtnOpenTextFile = new Button();
             SuspendLayout();
             // 
             // txtInput
@@ -77,12 +78,29 @@
             btnRegisteration.UseVisualStyleBackColor = false;
             btnRegisteration.Click += btnRegisteration_Click;
             // 
+            // BtnOpenTextFile
+            // 
+            BtnOpenTextFile.BackColor = Color.Black;
+            BtnOpenTextFile.Cursor = Cursors.Hand;
+            BtnOpenTextFile.FlatAppearance.BorderSize = 0;
+            BtnOpenTextFile.FlatStyle = FlatStyle.Flat;
+            BtnOpenTextFile.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BtnOpenTextFile.ForeColor = Color.White;
+            BtnOpenTextFile.Location = new Point(120, 185);
+            BtnOpenTextFile.Name = "BtnOpenTextFile";
+            BtnOpenTextFile.Size = new Size(130, 45);
+            BtnOpenTextFile.TabIndex = 3;
+            BtnOpenTextFile.Text = "Open Text File";
+            BtnOpenTextFile.UseVisualStyleBackColor = false;
+            BtnOpenTextFile.Click += BtnOpenTextFile_Click;
+            // 
             // FrmLab1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(365, 202);
+            ClientSize = new Size(365, 235);
+            Controls.Add(BtnOpenTextFile);
             Controls.Add(btnRegisteration);
             Controls.Add(btnCreate);
             Controls.Add(txtInput);
@@ -101,5 +119,6 @@
         private TextBox txtInput;
         private Button btnCreate;
         private Button btnRegisteration;
+        private Button BtnOpenTextFile;
     }
 }

@@ -36,11 +36,11 @@
             // lblFileName
             // 
             lblFileName.AutoSize = true;
-            lblFileName.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblFileName.Font = new Font("Segoe UI", 14F);
             lblFileName.ForeColor = Color.Black;
             lblFileName.Location = new Point(25, 25);
             lblFileName.Name = "lblFileName";
-            lblFileName.Size = new Size(151, 25);
+            lblFileName.Size = new Size(145, 25);
             lblFileName.TabIndex = 0;
             lblFileName.Text = "Enter File Name";
             // 
@@ -62,7 +62,7 @@
             btnOkay.FlatStyle = FlatStyle.Flat;
             btnOkay.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnOkay.ForeColor = Color.White;
-            btnOkay.Location = new Point(95, 120);
+            btnOkay.Location = new Point(100, 125);
             btnOkay.Name = "btnOkay";
             btnOkay.Size = new Size(120, 38);
             btnOkay.TabIndex = 2;

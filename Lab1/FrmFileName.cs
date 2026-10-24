@@ -18,23 +18,17 @@ namespace Lab1
 
         private void btnOkay_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtFileName.Text))
+            try
             {
-                MessageBox.Show("Cannot be empty. Please Try again.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-
-                return;
-            }
-            else
-            {
-
-                MessageBox.Show("Creating file is Completed.", "Create!", MessageBoxButtons.OK);
+                if (string.IsNullOrWhiteSpace(txtFileName.Text))
+                    throw new FormatException("File Name must not be empty and can only contain letters and spaces.");
                 SetFileName = txtFileName.Text + ".txt";
                 this.Close();
-
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show(ex.Message, "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-   
     }
 }

@@ -48,6 +48,8 @@
             lblContact = new Label();
             txtContact = new TextBox();
             btnRegister = new Button();
+            btnRecords = new Button();
+            BtnCreateFile = new Button();
             SuspendLayout();
             // 
             // lblTitle
@@ -253,12 +255,46 @@
             btnRegister.UseVisualStyleBackColor = false;
             btnRegister.Click += btnRegister_Click;
             // 
+            // btnRecords
+            // 
+            btnRecords.BackColor = Color.Black;
+            btnRecords.Cursor = Cursors.Hand;
+            btnRecords.FlatAppearance.BorderSize = 0;
+            btnRecords.FlatStyle = FlatStyle.Flat;
+            btnRecords.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRecords.ForeColor = Color.White;
+            btnRecords.Location = new Point(559, 211);
+            btnRecords.Name = "btnRecords";
+            btnRecords.Size = new Size(130, 40);
+            btnRecords.TabIndex = 20;
+            btnRecords.Text = "Records";
+            btnRecords.UseVisualStyleBackColor = false;
+            btnRecords.Click += btnRecords_Click;
+            // 
+            // BtnCreateFile
+            // 
+            BtnCreateFile.BackColor = Color.Black;
+            BtnCreateFile.Cursor = Cursors.Hand;
+            BtnCreateFile.FlatAppearance.BorderSize = 0;
+            BtnCreateFile.FlatStyle = FlatStyle.Flat;
+            BtnCreateFile.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BtnCreateFile.ForeColor = Color.White;
+            BtnCreateFile.Location = new Point(29, 211);
+            BtnCreateFile.Name = "BtnCreateFile";
+            BtnCreateFile.Size = new Size(130, 40);
+            BtnCreateFile.TabIndex = 21;
+            BtnCreateFile.Text = "Create File";
+            BtnCreateFile.UseVisualStyleBackColor = false;
+            BtnCreateFile.Click += BtnCreateFile_Click;
+            // 
             // FrmRegistration
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(709, 263);
+            Controls.Add(BtnCreateFile);
+            Controls.Add(btnRecords);
             Controls.Add(btnRegister);
             Controls.Add(txtContact);
             Controls.Add(lblContact);
@@ -311,5 +347,7 @@
         private Label lblContact;
         private TextBox txtContact;
         private Button btnRegister;
+        private Button btnRecords;
+        private Button BtnCreateFile;
     }
 }

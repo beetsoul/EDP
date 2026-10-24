@@ -9,24 +9,40 @@ namespace Lab1
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            FrmFileName frmName = new FrmFileName();
-            frmName.ShowDialog();
 
-            string getInput = txtInput.Text;
-            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-
-            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, FrmFileName.SetFileName)))
+            try
             {
-                outputFile.WriteLine(getInput);
-                Console.WriteLine(getInput);
+                FrmFileName frmName = new FrmFileName();
+                frmName.ShowDialog();
+
+                string getInput = txtInput.Text;
+                string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+                using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, FrmFileName.SetFileName)))
+                {
+                    outputFile.WriteLine(getInput);
+                    Console.WriteLine(getInput);
+                }
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show(ex.Message, "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void btnRegisteration_Click(object sender, EventArgs e)
         {
             FrmRegistration frmRegistration = new FrmRegistration();
-            frmRegistration.ShowDialog();
-          
+            frmRegistration.Show(this);
+            this.Hide();
+        }
+
+        private void BtnOpenTextFile_Click(object sender, EventArgs e)
+        {
+            FrmOpenTextFile frm = new FrmOpenTextFile();
+            frm.Show(this);
+            this.Hide();
         }
     }
 }
+

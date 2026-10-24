@@ -8,7 +8,13 @@
     <Compile Update="FrmLab1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmOpenTextFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmStudentRecord.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
