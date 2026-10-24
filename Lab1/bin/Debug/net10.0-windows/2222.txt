@@ -1,7 +1,0 @@
-Student No.: 2222
-Full Name: asdsadsa, sadasd s.
-Program: BS Information Technology
-Gender: Male
-Age: 22
-Birthday: 2026-10-10
-Contact No.: 1231321
